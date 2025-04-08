@@ -1,5 +1,6 @@
 package ec.edu.ups.poo.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profesor extends Persona {
@@ -10,8 +11,10 @@ public class Profesor extends Persona {
 
     public Profesor(String cedula, String nombre, String apellido, String telefono, String correo, List<Direccion> direcciones, List<String> titulosAcademicos, List<String> areasDeEspecializacion) {
         super(cedula, nombre, apellido, telefono, correo, direcciones);
-        this.titulosAcademicos = titulosAcademicos;
-        this.areasDeEspecializacion = areasDeEspecializacion;
+        this.titulosAcademicos = new ArrayList<>();
+        this.areasDeEspecializacion = new ArrayList<>();
+
+
     }
 
     public void addTitulosAcademicos(String tituAca) {

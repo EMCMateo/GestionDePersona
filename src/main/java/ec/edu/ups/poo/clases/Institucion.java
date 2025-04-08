@@ -2,7 +2,7 @@ package ec.edu.ups.poo.clases;
 import java.util.ArrayList;
 import java.util.List;
 public class Institucion {
-    
+
     private int id;
     private String nombre;
     private List<String> sedes;
@@ -17,8 +17,8 @@ public class Institucion {
         this.id = id;
         this.direccionesIns = direccionesIns;
         this.nombre = nombre;
-        this.sedes = sedes;
-        this.asignaciones = asignaciones;
+        this.sedes = new ArrayList<>();
+        this.asignaciones = new ArrayList<>();
 
     }
 
