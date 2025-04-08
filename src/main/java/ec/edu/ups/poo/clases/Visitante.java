@@ -3,25 +3,24 @@ package ec.edu.ups.poo.clases;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class Visitante extends Estudiante.Persona {
-    private String motivoVisita;
+public class Visitante extends Persona {
+    private String motivo;
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
 
-    public Visitante() {}
-    public Visitante(String cedula, String nombre, String apellido, String telefono, String correoElectronico, List<Administrativo.Direccion> direcciones, List<Institucion> instituciones, String motivoVisita, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
-        super(cedula, nombre, apellido, telefono, correoElectronico, direcciones, instituciones);
-        this.motivoVisita = motivoVisita;
+    public Visitante(String cedula, String nombre, String apellido, String telefono, String correo, List<Direccion> direcciones, String motivo, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
+        super(cedula, nombre, apellido, telefono, correo, direcciones);
+        this.motivo = motivo;
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;
     }
 
     public String getMotivoVisita() {
-        return motivoVisita;
+        return motivo;
     }
 
     public void setMotivoVisita(String motivoVisita) {
-        this.motivoVisita = motivoVisita;
+        this.motivo = motivo;
     }
 
     public GregorianCalendar getFechaEntrada() {
@@ -38,5 +37,15 @@ public class Visitante extends Estudiante.Persona {
 
     public void setFechaSalida(GregorianCalendar fechaSalida) {
         this.fechaSalida = fechaSalida;
+    }
+
+    @Override
+
+    public String toString(){
+        return super.toString()+
+                "Visitante: "+
+                "Fecha de Entrada: "+ fechaEntrada+
+                "Fecha de Salida: "+ fechaSalida+
+                "Motivo: "+ motivo;
     }
 }
