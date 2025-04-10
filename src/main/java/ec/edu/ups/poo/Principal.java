@@ -92,10 +92,10 @@ public class Principal {
         visitante.addDirecciones(direccionVisitante);
 
 
-        Asignacion asignacionEstudiante = new Asignacion(estudiante, new GregorianCalendar(2024, GregorianCalendar.JANUARY, 11), Rol.ESTUDIANTE);
-        Asignacion asignacionProfesor = new Asignacion(profesor, new GregorianCalendar(2023, GregorianCalendar.MARCH, 31), Rol.DOCENTE);
-        Asignacion asignacionAdministrativo = new Asignacion(administrativo, new GregorianCalendar(2022, GregorianCalendar.MAY, 10), Rol.ADMINISTRATIVO);
-        Asignacion asignacionVisitante = new Asignacion(visitante, new GregorianCalendar(2025, GregorianCalendar.APRIL, 7), Rol.VISITANTE);
+        Asignacion asignacionEstudiante = new Asignacion(estudiante, new GregorianCalendar(2024, 1, 11), Rol.ESTUDIANTE);
+        Asignacion asignacionProfesor = new Asignacion(profesor, new GregorianCalendar(2023, 3, 31), Rol.DOCENTE);
+        Asignacion asignacionAdministrativo = new Asignacion(administrativo, new GregorianCalendar(2022, 8, 10), Rol.ADMINISTRATIVO);
+        Asignacion asignacionVisitante = new Asignacion(visitante, new GregorianCalendar(2025, 4, 7), Rol.VISITANTE);
 
         // Asignar personas a instituciones
         institucion1.addAsignacion(asignacionEstudiante);
