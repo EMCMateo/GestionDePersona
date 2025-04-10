@@ -8,14 +8,13 @@ public class Profesor extends Persona {
     private List<String> areasDeEspecializacion;
 
     public Profesor(){
-        this.titulosAcademicos = new ArrayList<>();
-        this.areasDeEspecializacion = new ArrayList<>();
+
     }
 
-    public Profesor(String cedula, String nombre, String apellido, String telefono, String correo) {
+    public Profesor(String cedula, String nombre, String apellido, String telefono, String correo, List<String> titulosAcademicos, List<String> areasDeEspecializacion) {
         super(cedula, nombre, apellido, telefono, correo);
-        this.titulosAcademicos = new ArrayList<>();
-        this.areasDeEspecializacion = new ArrayList<>();
+        this.titulosAcademicos = titulosAcademicos;
+        this.areasDeEspecializacion = areasDeEspecializacion;
 
 
     }
@@ -26,6 +25,14 @@ public class Profesor extends Persona {
 
     public List<String> getTitulosAcademicos() {
         return titulosAcademicos;
+    }
+
+    public void setTitulosAcademicos(List<String> titulosAcademicos) {
+        this.titulosAcademicos = titulosAcademicos;
+    }
+
+    public void setAreasDeEspecializacion(List<String> areasDeEspecializacion) {
+        this.areasDeEspecializacion = areasDeEspecializacion;
     }
 
     public void addAreasDeEspecializacion(String areasEsp) {
@@ -40,8 +47,8 @@ public class Profesor extends Persona {
 
     public String toString(){
         return super.toString()+
-                " Profesor: "+
-                " Titulos Academicos: "+ titulosAcademicos+
-                " Areas de Especializacion: "+ areasDeEspecializacion;
+                " \n Profesor: "+
+                " \n Titulos Academicos: "+ titulosAcademicos+
+                " \n Areas de Especializacion: "+ areasDeEspecializacion;
     }
 }

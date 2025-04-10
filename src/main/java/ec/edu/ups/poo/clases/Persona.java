@@ -78,12 +78,12 @@ public class Persona {
 
     public String toString(){
         return " Persona: "+
-                " Nombre: "+ nombre+
-                " Apellido: "+ apellido+
-                " Cedula: "+ cedula+
-                " Telefono: "+ telefono+
-                " correo: "+ correo+
-                " Direcciones: "+ direcciones;
+                " \n Nombre: "+ nombre+
+                " \n Apellido: "+ apellido+
+                " \n Cedula: "+ cedula+
+                " \n Telefono: "+ telefono+
+                " \n correo: "+ correo+
+                " \n Direcciones: "+ direcciones;
     }
 
 }

@@ -15,11 +15,10 @@ public class Institucion {
 
 
     public Institucion() {}
-    public Institucion(int id, String nombre,Direccion direcciones, List<String> sedes, List<Asignacion> asignaciones) {
+    public Institucion(int id, String nombre, List<String> sedes, List<Asignacion> asignaciones) {
         this.id = id;
         this.nombre = nombre;
         this.sedes = sedes;
-        this.direcciones = new Direccion();
         this.asignaciones = asignaciones;
 
     }
@@ -71,11 +70,11 @@ public class Institucion {
     @Override
     public String toString(){
         return " Institucion: "+
-                " Nombre: "+nombre+
-                " Direccion: " + direcciones+
-                " Sede: "+sedes+
-                " Asignacion: "+asignaciones+
-                " ID: "+id;
+                " \n Nombre: "+nombre+
+                " \n Direccion: " + direcciones+
+                " \n Sede: "+sedes+
+                " \n Asignacion: "+asignaciones+
+                " \n ID: "+id;
 
 
     }

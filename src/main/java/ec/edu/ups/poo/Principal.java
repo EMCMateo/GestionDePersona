@@ -63,9 +63,10 @@ public class Principal {
         System.out.println(titulosAcademicos);
         System.out.println(areasDeEspecializacion);
         */
+
         List<Asignacion> asignaciones = new ArrayList<>();
         List<Asignacion> asignaciones2 = new ArrayList<>();
-        List<Direccion> dire
+
 
 
         Direccion direccionEstudiante = new Direccion(TipoDireccion.CASA,"Av Loja","Don Bosco", "787","Cuenca","Azuay", "Puerto Rico");
@@ -73,14 +74,18 @@ public class Principal {
         Direccion direccionAdministrativo = new Direccion(TipoDireccion.TRABAJO,"Av España","Cruz Cafune", "8-8","Mallorca","Sevilla", "España");
         Direccion direccionVisitante = new Direccion(TipoDireccion.INSTITUCION,"Av Las Americas","Kemba Walker", "787","Cuenca","Santulce", "Puerto Rico");
 
-        Institucion institucion1 = new Institucion(001,"Universidad Politecnica Salesiana - Cuenca",  sedes, asignaciones,);
-        Institucion institucion2 = new Institucion(002,"Universidad Politecnica Salesiana - Quito",  sedes, asignaciones);
+        Institucion institucion1 = new Institucion(001,"Universidad Politecnica Salesiana - Cuenca",  sedes, asignaciones);
+        Institucion institucion2 = new Institucion(002,"Universidad Politecnica Salesiana - Quito",  sedes, asignaciones2);
 
         Estudiante estudiante =  new Estudiante("0150363232", "Mateo","Molina", "0991650338", "mmolinac10@est.ups.edu.ec","Computacion");
-        Profesor profesor =  new Profesor("01152351519", "Edwin","Vargas", "04516565165", "profesor@ups.edu.ec");
+        Profesor profesor =  new Profesor("01152351519", "Edwin","Vargas", "04516565165", "profesor@ups.edu.ec", titulosAcademicos, areasDeEspecializacion);
         Visitante visitante = new Visitante("3126516512","Juanito","Billar","6256156156","visitante@ups.edu.ec","Acceso a Instalaciones", new GregorianCalendar(2025, GregorianCalendar.AUGUST, 29),new GregorianCalendar(2025, GregorianCalendar.AUGUST, 30));
         Administrativo administrativo = new Administrativo("265165156","Jhon","Cabrion","12561561","administrativo@ups.edu.ec",cargos,responsabilidades);
 
+        /*
+        profesor.addTitulosAcademicos("Maestria en Ciencias de la Computacion");
+        profesor.addAreasDeEspecializacion("Gestion de Estudiantes problematicos, Base de Datos");
+*/
         estudiante.addDirecciones(direccionEstudiante);
         profesor.addDirecciones(direccionProfesor);
         administrativo.addDirecciones(direccionAdministrativo);
@@ -98,6 +103,9 @@ public class Principal {
 
         institucion2.addAsignacion(asignacionAdministrativo);
         institucion2.addAsignacion(asignacionVisitante);
+
+        institucion1.addDireccion(TipoDireccion.INSTITUCION, "Av Bad Bunny","Calle Dei V underwatel","787","Cuenca","Almirante", "Australia" );
+        institucion2.addDireccion(TipoDireccion.INSTITUCION, "De Carolina","KYOTO","593","Cuenca","Alicante", "España" );
 
         // Imprimir datos
         System.out.println(institucion1);
