@@ -6,8 +6,8 @@ import java.util.List;
 public class Estudiante extends Persona {
     private String carrera;
 
-    public Estudiante(String cedula, String nombre, String apellido, String telefono, String correo, List<Direccion> direcciones, String carrera) {
-        super(cedula, nombre, apellido, telefono, correo, direcciones);
+    public Estudiante(String cedula, String nombre, String apellido, String telefono, String correo, String carrera) {
+        super(cedula, nombre, apellido, telefono, correo);
         this.carrera = carrera;
     }
 
@@ -22,8 +22,8 @@ public class Estudiante extends Persona {
     @Override
     public String toString(){
         return super.toString()+
-                "Estudiante: "+
-                "Carrera: "+carrera;
+                " Estudiante: "+
+                " Carrera: "+carrera;
 
 
 

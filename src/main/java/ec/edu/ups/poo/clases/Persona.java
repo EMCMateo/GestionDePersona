@@ -9,13 +9,13 @@ public class Persona {
     private String correo;
     private List<Direccion> direcciones;
 
-    private Persona(){
+    public Persona(){
         direcciones = new ArrayList<>();
     }
 
 
 
-    public Persona(String nombre, String cedula, String apellido, String telefono, String correo, List<Direccion> direcciones) {
+    public Persona(String nombre, String cedula, String apellido, String telefono, String correo) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.apellido = apellido;
@@ -77,13 +77,13 @@ public class Persona {
     @Override
 
     public String toString(){
-        return "Persona: "+
-                "Nombre: "+ nombre+
-                "Apellido: "+ apellido+
-                "Cedula: "+ cedula+
-                "Telefono: "+ telefono+
-                "correo: "+ correo+
-                "Direcciones: "+ direcciones;
+        return " Persona: "+
+                " Nombre: "+ nombre+
+                " Apellido: "+ apellido+
+                " Cedula: "+ cedula+
+                " Telefono: "+ telefono+
+                " correo: "+ correo+
+                " Direcciones: "+ direcciones;
     }
 
 }

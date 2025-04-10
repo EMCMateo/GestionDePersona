@@ -1,4 +1,6 @@
 package ec.edu.ups.poo.clases;
+import ec.edu.ups.poo.enums.TipoDireccion;
+
 import java.util.ArrayList;
 import java.util.List;
 public class Institucion {
@@ -6,19 +8,19 @@ public class Institucion {
     private int id;
     private String nombre;
     private List<String> sedes;
-    private Direccion direccionesIns; //La clase Direccion
+    private Direccion direcciones; //La clase Direccion
     private List<Asignacion> asignaciones;//De la clase Asignacion
 
 
 
 
     public Institucion() {}
-    public Institucion(int id, String nombre, List<String> sedes, Direccion direccionesIns, List<Asignacion> asignaciones) {
+    public Institucion(int id, String nombre,Direccion direcciones, List<String> sedes, List<Asignacion> asignaciones) {
         this.id = id;
-        this.direccionesIns = direccionesIns;
         this.nombre = nombre;
-        this.sedes = new ArrayList<>();
-        this.asignaciones = new ArrayList<>();
+        this.sedes = sedes;
+        this.direcciones = new Direccion();
+        this.asignaciones = asignaciones;
 
     }
 
@@ -41,7 +43,9 @@ public class Institucion {
         //Metodo para agregar un elemento a una lista
         sedes.add(sede);
     }
-
+    public void setSedes(List<String> sedes){
+        this.sedes = sedes;
+    }
     public List<String> getSedes() {
         return sedes;
     }
@@ -55,23 +59,23 @@ public class Institucion {
         return asignaciones;
     }
 
+    public void addDireccion (TipoDireccion tipoDireccion, String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais){
+        this.direcciones = new Direccion(tipoDireccion,callePrincipal,calleSecundaria, numeracion,ciudad, provincia,pais);
+    }
     public Direccion getDireccionesIns() {
-        return direccionesIns;
+        return direcciones;
     }
 
-    public void setDireccionesIns(Direccion direccionesIns) {
-        this.direccionesIns = direccionesIns;
-    }
 
 
     @Override
     public String toString(){
-        return "Institucion: "+
-                "Nombre: "+nombre+
-                "Direccion: " + direccionesIns+
-                "Sede: "+sedes+
-                "Asignacion: "+asignaciones+
-                "ID: "+id;
+        return " Institucion: "+
+                " Nombre: "+nombre+
+                " Direccion: " + direcciones+
+                " Sede: "+sedes+
+                " Asignacion: "+asignaciones+
+                " ID: "+id;
 
 
     }

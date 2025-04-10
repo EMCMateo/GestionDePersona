@@ -8,8 +8,8 @@ public class Visitante extends Persona {
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
 
-    public Visitante(String cedula, String nombre, String apellido, String telefono, String correo, List<Direccion> direcciones, String motivo, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
-        super(cedula, nombre, apellido, telefono, correo, direcciones);
+    public Visitante(String cedula, String nombre, String apellido, String telefono, String correo, String motivo, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
+        super(cedula, nombre, apellido, telefono, correo);
         this.motivo = motivo;
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;
@@ -43,9 +43,9 @@ public class Visitante extends Persona {
 
     public String toString(){
         return super.toString()+
-                "Visitante: "+
-                "Fecha de Entrada: "+ fechaEntrada+
-                "Fecha de Salida: "+ fechaSalida+
-                "Motivo: "+ motivo;
+                " Visitante: "+
+                " Fecha de Entrada: "+ fechaEntrada+
+                " Fecha de Salida: "+ fechaSalida+
+                " Motivo: "+ motivo;
     }
 }
