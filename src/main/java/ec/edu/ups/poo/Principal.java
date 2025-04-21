@@ -25,7 +25,10 @@ public class Principal {
         sedes.add("Quito");
         sedes.add("Guayaquil");
         institucion.setSedes(sedes);
+        /*
         System.out.println(institucion.getSedes());
+        */
+
 
         //Ejemplo creacion de Cargos y Responsabilidades
         Administrativo administrativos = new Administrativo();
@@ -108,7 +111,9 @@ public class Principal {
         institucion2.addDireccion(TipoDireccion.INSTITUCION, "De Carolina","KYOTO","593","Cuenca","Alicante", "España" );
 
         // Imprimir datos
-        System.out.println(institucion1);
-        System.out.println(institucion2);
+        System.out.println("Institucion 1: "+institucion1);
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Institucion 2: "+institucion2);
+        System.out.println("-----------------------------------------------------------");
     }
 }

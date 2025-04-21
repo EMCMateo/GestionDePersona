@@ -69,12 +69,12 @@ public class Institucion {
 
     @Override
     public String toString(){
-        return " Institucion: "+
+        return  " \n ID: "+id+
                 " \n Nombre: "+nombre+
                 " \n Direccion: " + direcciones+
                 " \n Sede: "+sedes+
-                " \n Asignacion: "+asignaciones+
-                " \n ID: "+id;
+                " \n Asignacion: "+asignaciones;
+
 
 
     }
